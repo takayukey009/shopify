@@ -2,21 +2,9 @@
 import React from 'react';
 import { LTV_GROWTH_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Area } from 'recharts';
 
 export const LtvGrowthChart: React.FC = () => {
-  const RechartsGlobal = (window as any).Recharts;
-
-  if (!RechartsGlobal) {
-    console.warn("Recharts library not found, LtvGrowthChart will not render.");
-     return (
-        <ChartWrapper className="h-72 md:h-80">
-            <div className="flex items-center justify-center h-full">
-                <p className="text-sm text-gray-500">Chart is loading...</p>
-            </div>
-        </ChartWrapper>
-    );
-  }
-  const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Area } = RechartsGlobal;
 
   return (
     <ChartWrapper className="h-72 md:h-80">

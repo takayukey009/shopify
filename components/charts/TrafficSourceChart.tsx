@@ -2,23 +2,9 @@
 import React from 'react';
 import { TRAFFIC_SOURCE_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
+import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
 export const TrafficSourceChart: React.FC = () => {
-  const RechartsGlobal = (window as any).Recharts;
-
-  if (!RechartsGlobal) {
-    console.warn("Recharts library not found, TrafficSourceChart will not render.");
-    // Fallback or loading state can be rendered by ChartWrapper itself if Recharts isn't available there first.
-    // For simplicity, returning a ChartWrapper with a text message.
-    return (
-        <ChartWrapper className="h-64 md:h-80 max-w-md">
-            <div className="flex items-center justify-center h-full">
-                <p className="text-sm text-gray-500">Chart is loading...</p>
-            </div>
-        </ChartWrapper>
-    );
-  }
-  const { PieChart, Pie, Cell, Tooltip, Legend } = RechartsGlobal;
 
   return (
     <ChartWrapper className="h-64 md:h-80 max-w-md">

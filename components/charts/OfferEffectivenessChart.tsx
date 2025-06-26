@@ -3,21 +3,9 @@ import React from 'react';
 import { OFFER_EFFECTIVENESS_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
 import { CustomXAxisTick } from './CustomXAxisTick';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 export const OfferEffectivenessChart: React.FC = () => {
-  const RechartsGlobal = (window as any).Recharts;
-
-  if (!RechartsGlobal) {
-    console.warn("Recharts library not found, OfferEffectivenessChart will not render.");
-    return (
-        <ChartWrapper className="h-64 md:h-72">
-            <div className="flex items-center justify-center h-full">
-                <p className="text-sm text-gray-500">Chart is loading...</p>
-            </div>
-        </ChartWrapper>
-    );
-  }
-  const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } = RechartsGlobal;
 
   return (
     <ChartWrapper className="h-64 md:h-72">
