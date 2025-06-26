@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { LtvGrowthChart } from './charts/LtvGrowthChart';
-import { BRILLIANT_BLUES } from '../../constants';
+import { BRILLIANT_BLUES } from '../constants';
 
 export const RetentionPhase: React.FC = () => {
   return (

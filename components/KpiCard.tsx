@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BRILLIANT_BLUES } from '../../constants';
+import { BRILLIANT_BLUES } from '../constants';
 
 export const KpiCard: React.FC = () => {
   return (

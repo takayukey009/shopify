@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { processAxisLabel } from '../../constants';
+import { processAxisLabel } from '../constants';
 import { CustomTickProps } from '../../types';
 
 

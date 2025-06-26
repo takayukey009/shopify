@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TRAFFIC_SOURCE_DATA, BRILLIANT_BLUES } from '../../constants';
+import { TRAFFIC_SOURCE_DATA, BRILLIANT_BLUES } from '../constants';
 import { ChartWrapper } from './ChartContainer';
 
 export const TrafficSourceChart: React.FC = () => {

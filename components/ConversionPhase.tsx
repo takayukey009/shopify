@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BRILLIANT_BLUES } from '../../constants';
+import { BRILLIANT_BLUES } from '../constants';
 
 interface FunnelStepProps {
   backgroundColor: string;

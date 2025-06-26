@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { OFFER_EFFECTIVENESS_DATA, BRILLIANT_BLUES } from '../../constants';
+import { OFFER_EFFECTIVENESS_DATA, BRILLIANT_BLUES } from '../constants';
 import { ChartWrapper } from './ChartContainer';
 import { CustomXAxisTick } from './CustomXAxisTick';
 
