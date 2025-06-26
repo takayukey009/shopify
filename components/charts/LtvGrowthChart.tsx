@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { LTV_GROWTH_DATA, BRILLIANT_BLUES } from '../constants';
+import { LTV_GROWTH_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
 
 export const LtvGrowthChart: React.FC = () => {
