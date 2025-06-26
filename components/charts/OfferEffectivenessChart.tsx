@@ -1,11 +1,26 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { OFFER_EFFECTIVENESS_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
 import { CustomXAxisTick } from './CustomXAxisTick';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 export const OfferEffectivenessChart: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <ChartWrapper className="h-64 md:h-72">
+        <div className="flex items-center justify-center h-full">
+          <p className="text-sm text-gray-500">Chart is loading...</p>
+        </div>
+      </ChartWrapper>
+    );
+  }
 
   return (
     <ChartWrapper className="h-64 md:h-72">

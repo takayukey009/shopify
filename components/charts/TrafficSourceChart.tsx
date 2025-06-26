@@ -1,10 +1,25 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TRAFFIC_SOURCE_DATA, BRILLIANT_BLUES } from '../../constants';
 import { ChartWrapper } from './ChartContainer';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
 export const TrafficSourceChart: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <ChartWrapper className="h-64 md:h-80 max-w-md">
+        <div className="flex items-center justify-center h-full">
+          <p className="text-sm text-gray-500">Chart is loading...</p>
+        </div>
+      </ChartWrapper>
+    );
+  }
 
   return (
     <ChartWrapper className="h-64 md:h-80 max-w-md">
