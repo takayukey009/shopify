@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { TrafficSourceChart } from './charts/TrafficSourceChart';
-import { BRILLIANT_BLUES } from '../../constants';
+import { BRILLIANT_BLUES } from '../constants';
 
 export const AcquisitionPhase: React.FC = () => {
   return (
